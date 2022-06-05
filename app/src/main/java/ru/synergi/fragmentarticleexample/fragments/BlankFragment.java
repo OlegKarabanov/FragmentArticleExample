@@ -24,12 +24,16 @@ public class RatingBarFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    private static final int YES = 0;
+    private static final int NO = 1;
+
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private RatingBar ratingBar;
 
-    public RatingBarFragment() {
+
+    public BlancFragment() {
         // Required empty public constructor
     }
 
@@ -64,7 +68,7 @@ public class RatingBarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View rootView = inflater.inflate(R.layout.fragment_blank, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_rating_bar, container, false);
 
         ratingBar = (RatingBar) rootView.findViewById(R.id.ratingBar);
         addListenerOnButton(ratingBar);
@@ -79,6 +83,6 @@ public class RatingBarFragment extends Fragment {
                 Toast.makeText(getActivity(), "RATING IS: ", + rating,Toast.LENGTH_LONG).show();
 
             }
-        };
+        });
     }
 }
