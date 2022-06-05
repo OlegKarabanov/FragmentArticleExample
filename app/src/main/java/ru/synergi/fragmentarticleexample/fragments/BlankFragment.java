@@ -16,7 +16,7 @@ import ru.synergi.fragmentarticleexample.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BlankFragment#newInstance} factory method to
+ * Use the {@link RatingBarFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class BlankFragment extends Fragment {
@@ -35,7 +35,7 @@ public class BlankFragment extends Fragment {
     private String mParam2;
 
 
-    public void BlankFragment() {
+    public BlankFragment() {
         // Required empty public constructor
     }
 
@@ -60,7 +60,7 @@ public class BlankFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() == null) {
+        if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
